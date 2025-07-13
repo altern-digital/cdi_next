@@ -26,16 +26,16 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-gray-400">
             <li>
-              <Link href="#">About Us</Link>
+              <Link href="about">About Us</Link>
             </li>
             <li>
-              <Link href="#">Projects</Link>
+              <Link href="projects">Projects</Link>
             </li>
             <li>
-              <Link href="#">Partners</Link>
+              <Link href="partners">Partners</Link>
             </li>
             <li>
-              <Link href="#">Contact Us</Link>
+              <Link href="contact-us">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -47,13 +47,13 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-gray-400">
             <li>
-              <Link href="#">Lighting Applications Services</Link>
+              <Link href="services">Lighting Applications Services</Link>
             </li>
             <li>
-              <Link href="#">Lighting Control System Services</Link>
+              <Link href="services">Lighting Control System Services</Link>
             </li>
             <li>
-              <Link href="#">Upgrade LED & Retrofit project</Link>
+              <Link href="services">Upgrade LED & Retrofit project</Link>
             </li>
           </ul>
         </div>

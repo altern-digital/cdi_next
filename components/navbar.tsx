@@ -28,16 +28,18 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#222222] text-white">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo kiri */}
-        <div className="flex items-center space-x-4">
-          <div className="text-sm leading-tight uppercase">
-            <p className="text-white">PT. CAHAYA</p>
-            <p className="text-white">DESAIN</p>
-            <p className="text-white">INDONESIA</p>
+        <Link href="/" className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
+            <div className="text-sm leading-tight uppercase">
+              <p className="text-white">PT. CAHAYA</p>
+              <p className="text-white">DESAIN</p>
+              <p className="text-white">INDONESIA</p>
+            </div>
+            <img src="/logo.png" alt="CDI Logo" className="h-8 w-auto" />
           </div>
-          <img src="/logo.png" alt="CDI Logo" className="h-8 w-auto" />
-        </div>
+        </Link>
 
         {/* Hamburger for mobile */}
         <div className="md:hidden">

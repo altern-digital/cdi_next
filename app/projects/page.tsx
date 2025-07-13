@@ -1,18 +1,14 @@
 import React from "react";
-import Navbar from "../navbar";
+import Navbar from "../../components/navbar";
 import ProjectsHero from "./component/projects_header";
 import ProjectContent from "./component/projects_content";
-import Footer from "../footer_section";
+import Footer from "../../components/footer_section";
 
 function page() {
   return (
     <div className="min-h-screen">
-      <div className="sticky top-0 z-50">
-        <Navbar />
-      </div>
       <ProjectsHero />
       <ProjectContent />
-      <Footer />
     </div>
   );
 }
