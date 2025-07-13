@@ -112,12 +112,12 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-yellow-500">
+            <Link href="partners" className="hover:text-yellow-500">
               PARTNERS
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-yellow-500">
+            <Link href="contact-us" className="hover:text-yellow-500">
               CONTACT US
             </Link>
           </li>
