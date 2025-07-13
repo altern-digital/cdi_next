@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const projects = [
   {
@@ -12,7 +15,6 @@ const projects = [
   {
     title: "Hotel Pullman Legian Kuta, Bali",
     image: "/pullman.jpg",
-    highlight: true, // Will show colored footer
   },
   {
     title: "Plaza Premium Lounge, CGK",
@@ -33,16 +35,24 @@ const projects = [
   {
     title: "Tujuh Beach Club Ubud, Bali",
     image: "/tujuh.jpg",
-    highlight: true,
   },
 ];
 
 export default function ProjectContent() {
+  const [highlightedProject, setHighlightedProject] = useState<number | null>(
+    null
+  );
+
   return (
     <section className="bg-[#1e1e1e] py-12 px-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#2b2b2b] shadow-md">
+          <div
+            key={index}
+            className="bg-[#2b2b2b] shadow-md"
+            onMouseEnter={() => setHighlightedProject(index)}
+            onMouseLeave={() => setHighlightedProject(null)}
+          >
             {/* Image */}
             <div className="relative group h-72 overflow-hidden">
               <Image
@@ -52,18 +62,12 @@ export default function ProjectContent() {
                 objectFit="cover"
                 className="transition duration-300 group-hover:scale-105"
               />
-              {/* Optional Cross Icon (centered) */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-white text-5xl opacity-0 group-hover:opacity-80 transition">
-                  +
-                </div>
-              </div>
             </div>
 
             {/* Footer */}
             <div
               className={`text-center py-4 ${
-                project.highlight
+                highlightedProject === index
                   ? "bg-gradient-to-r from-cyan-500 to-blue-500"
                   : ""
               }`}

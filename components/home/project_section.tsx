@@ -32,13 +32,13 @@ export default function ProjectsSection() {
   return (
     <section className="bg-[#1e1e1e] text-white pt-16">
       <div className="text-center mb-10">
-        <p className="text-sm text-yellow-500 uppercase font-semibold">
+        <p className="text-sm text-blue-500 uppercase font-semibold">
           Projects
         </p>
         <h2 className="text-2xl md:text-3xl font-bold mt-2">
           The projects we proudly worked on.
         </h2>
-        <div className="h-1 w-20 bg-yellow-500 mt-4 mx-auto"></div>
+        <div className="h-1 w-20 bg-blue-500 mt-4 mx-auto"></div>
       </div>
 
       <div className="relative w-full">

@@ -10,13 +10,13 @@ export default function ContactSection() {
     >
       <div className="max-w-6xl mx-auto px-4 flex justify items-center">
         <div className="bg-[#2a2a2a] text-white p-8 md:p-10 shadow-lg max-w-md w-full">
-          <p className="text-sm uppercase text-yellow-500 mb-2 font-semibold">
+          <p className="text-sm uppercase text-blue-500 mb-2 font-semibold">
             Get Free Quote
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Let’s work together.
           </h2>
-          <form className="space-y-4">
+          {/* <form className="space-y-4">
             <input
               type="text"
               placeholder="Name *"
@@ -48,7 +48,7 @@ export default function ContactSection() {
             >
               Send
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </section>

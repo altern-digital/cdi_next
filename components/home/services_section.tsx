@@ -19,13 +19,13 @@ export default function ServicesSection() {
   return (
     <section className="bg-[#1e1e1e] text-white py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="text-sm uppercase text-yellow-500 tracking-wider mb-2">
+        <p className="text-sm uppercase text-blue-500 tracking-wider mb-2">
           Services
         </p>
         <h2 className="text-2xl md:text-4xl font-semibold mb-2">
           We provide complete project lighting solutions.
         </h2>
-        <div className="w-64 h-[2px] bg-yellow-500 mx-auto my-12" />
+        <div className="w-64 h-[2px] bg-blue-500 mx-auto my-12" />
       </div>
 
       <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">

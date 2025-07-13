@@ -7,9 +7,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700">
         {/* About Us */}
         <div>
-          <h3 className="text-yellow-500 font-semibold text-lg mb-4">
-            About Us
-          </h3>
+          <h3 className="text-blue-500 font-semibold text-lg mb-4">About Us</h3>
           <p className="text-sm leading-relaxed text-gray-400">
             The story began in 2004, when we were just a passionate team of
             lighting “provider”. We strive to learn every aspect of light with
@@ -21,7 +19,7 @@ export default function Footer() {
 
         {/* Information */}
         <div>
-          <h3 className="text-yellow-500 font-semibold text-lg mb-4">
+          <h3 className="text-blue-500 font-semibold text-lg mb-4">
             Information
           </h3>
           <ul className="space-y-3 text-gray-400">
@@ -42,9 +40,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h3 className="text-yellow-500 font-semibold text-lg mb-4">
-            Services
-          </h3>
+          <h3 className="text-blue-500 font-semibold text-lg mb-4">Services</h3>
           <ul className="space-y-3 text-gray-400">
             <li>
               <Link href="services">Lighting Applications Services</Link>
@@ -60,7 +56,7 @@ export default function Footer() {
 
         {/* Contact Us */}
         <div>
-          <h3 className="text-yellow-500 font-semibold text-lg mb-4">
+          <h3 className="text-blue-500 font-semibold text-lg mb-4">
             Contact Us
           </h3>
           <p className="text-sm text-gray-400 leading-relaxed">

@@ -4,8 +4,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer_section";
 
 export const metadata: Metadata = {
-  title: "CDI",
-  description: "Cahaya Design Indonesia",
+  title: "Cahaya Desain Indonesia",
+  description: "Welcoming a Smart, Beautiful, and Bright City",
 };
 
 export default function RootLayout({

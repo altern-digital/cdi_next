@@ -10,8 +10,8 @@ export function Content() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               The Story <br /> Of Our Light
             </h2>
-            {/* Yellow Divider */}
-            <div className="w-64 h-[2px] bg-yellow-400 mt-4 mb-8"></div>
+            {/* Blue Divider */}
+            <div className="w-64 h-[2px] bg-blue-400 mt-4 mb-8"></div>
 
             <div className="space-y-6 text-lg text-gray-300 mb-10 max-w-lg">
               <p>
@@ -54,12 +54,12 @@ export function Content() {
           {/* Right Column: Grid of Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1: Creating Customer Oriented Relationship */}
-            <div className="relative bg-gradient-to-r from-cyan-600 to-cyan-100 p-6 flex flex-col justify-end overflow-hidden aspect-w-16 aspect-h-9 md:aspect-w-auto md:aspect-h-auto">
+            <div className="relative p-6 flex flex-col justify-end overflow-hidden aspect-w-16 aspect-h-9 md:aspect-w-auto md:aspect-h-auto">
               <h3 className="relative z-10 text-xl md:text-xl font-bold mb-2">
                 Creating Customer Oriented <br className="hidden md:block" />
                 “Relationship”
               </h3>
-              <div className="w-full h-[2px] bg-yellow-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 Building trust and loyalty is key to successful, long-term
                 partnerships with our clients.
@@ -81,7 +81,7 @@ export function Content() {
                 Provide the best <br className="hidden md:block" />
                 Product & Service”
               </h3>
-              <div className="w-full h-[2px] bg-yellow-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 We make sure the best product for every customer design, the
                 best products for every customer expectation.
@@ -103,7 +103,7 @@ export function Content() {
                 Creative, Innovation & <br className="hidden md:block" />
                 Intuitive
               </h3>
-              <div className="w-full h-[2px] bg-yellow-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 Consulting the best choice of product in Creative, Innovative &
                 Intuitive ways possible.

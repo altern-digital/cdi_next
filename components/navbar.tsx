@@ -27,7 +27,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-[#222222] text-white">
+    <nav className="bg-black text-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo kiri */}
         <Link href="/" className="flex items-center space-x-4">
@@ -58,30 +58,30 @@ export default function Navbar() {
         {/* Menu for desktop */}
         <ul className="hidden md:flex space-x-6 text-sm font-semibold">
           <li>
-            <Link href="/" className="hover:text-yellow-500">
+            <Link href="/" className="hover:text-blue-500">
               HOME
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-yellow-500">
+            <Link href="/about" className="hover:text-blue-500">
               ABOUT US
             </Link>
           </li>
           <li className="relative" ref={dropdownRef}>
             <button
               onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1 hover:text-yellow-500"
+              className="flex items-center gap-1 hover:text-blue-500"
             >
               SERVICES <span className="text-xs">▼</span>
             </button>
             {/* Dropdown */}
             {showDropdown && (
-              <div className="absolute top-full mt-2 w-64 bg-[#5c4525] text-white shadow-lg z-50">
+              <div className="absolute top-full mt-2 w-64 bg-black text-white shadow-lg z-50">
                 <ul className="text-sm py-2">
                   <li>
                     <Link
                       href="/services"
-                      className="block px-4 py-2 hover:bg-yellow-600 hover:text-white transition"
+                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
                     >
                       Lighting Applications Services
                     </Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services"
-                      className="block px-4 py-2 hover:bg-yellow-600 hover:text-white transition"
+                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
                     >
                       Lighting Control System Services
                     </Link>
@@ -97,7 +97,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/services"
-                      className="block px-4 py-2 hover:bg-yellow-600 hover:text-white transition"
+                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
                     >
                       Upgrade LED & Retrofit Project
                     </Link>
@@ -107,17 +107,17 @@ export default function Navbar() {
             )}
           </li>
           <li>
-            <Link href="/projects" className="hover:text-yellow-500">
+            <Link href="/projects" className="hover:text-blue-500">
               PROJECTS
             </Link>
           </li>
           <li>
-            <Link href="partners" className="hover:text-yellow-500">
+            <Link href="partners" className="hover:text-blue-500">
               PARTNERS
             </Link>
           </li>
           <li>
-            <Link href="contact-us" className="hover:text-yellow-500">
+            <Link href="contact-us" className="hover:text-blue-500">
               CONTACT US
             </Link>
           </li>
@@ -127,40 +127,40 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-semibold">
-          <Link href="/" className="block hover:text-yellow-500">
+          <Link href="/" className="block hover:text-blue-500">
             HOME
           </Link>
-          <Link href="/about" className="block hover:text-yellow-500">
+          <Link href="/about" className="block hover:text-blue-500">
             ABOUT US
           </Link>
           <div className="space-y-1">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1 hover:text-yellow-500"
+              className="flex items-center gap-1 hover:text-blue-500"
             >
               SERVICES <span className="text-xs">▼</span>
             </button>
             {showDropdown && (
               <div className="pl-4 space-y-1 text-sm">
-                <Link href="/services" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-blue-500">
                   Lighting Applications Services
                 </Link>
-                <Link href="/services" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-blue-500">
                   Lighting Control System Services
                 </Link>
-                <Link href="/services" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-blue-500">
                   Upgrade LED & Retrofit Project
                 </Link>
               </div>
             )}
           </div>
-          <Link href="/projects" className="block hover:text-yellow-500">
+          <Link href="/projects" className="block hover:text-blue-500">
             PROJECTS
           </Link>
-          <Link href="/partners" className="block hover:text-yellow-500">
+          <Link href="/partners" className="block hover:text-blue-500">
             PARTNERS
           </Link>
-          <Link href="/contact-us" className="block hover:text-yellow-500">
+          <Link href="/contact-us" className="block hover:text-blue-500">
             CONTACT US
           </Link>
         </div>

@@ -27,16 +27,22 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 px-6">
             <Link
-              href="#"
+              href="services"
               className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
             >
               View Services →
             </Link>
             <Link
-              href="#"
+              href="contact-us"
               className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
             >
               Contact us →
+            </Link>
+            <Link
+              href="compro.pdf"
+              className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
+            >
+              Company profile →
             </Link>
           </div>
         </div>

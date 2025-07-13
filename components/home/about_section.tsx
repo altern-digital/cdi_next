@@ -13,7 +13,7 @@ export default function AboutSection() {
       {/* Overlay & Content */}
       <div className="absolute inset-0 bg-opacity-50 z-10 flex justify-end items-center px-4 md:px-16">
         <div className="bg-[#2a2a2a] text-white max-w-lg p-12 md:p-10 shadow-lg">
-          <p className="text-sm uppercase text-yellow-500 tracking-wider mb-2">
+          <p className="text-sm uppercase text-blue-500 tracking-wider mb-2">
             About Us
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -28,7 +28,7 @@ export default function AboutSection() {
             purpose to deliver best value by adding professionalism to passion.
           </p>
           <Link
-            href="#"
+            href="about"
             className="inline-block border border-white px-4 py-2 text-sm hover:bg-white hover:text-black transition"
           >
             Read More →

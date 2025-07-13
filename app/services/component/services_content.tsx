@@ -10,7 +10,7 @@ export default function ServicesContent() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               We provide complete project <br /> lighting solutions.
             </h2>
-            <div className="w-64 h-[2px] bg-yellow-400 mt-2" />
+            <div className="w-64 h-[2px] bg-blue-400 mt-2" />
           </div>
           <div className="text-gray-300 text-base leading-relaxed">
             <p>
