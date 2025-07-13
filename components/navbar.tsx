@@ -127,10 +127,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-semibold">
-          <Link href="#" className="block hover:text-yellow-500">
+          <Link href="/" className="block hover:text-yellow-500">
             HOME
           </Link>
-          <Link href="#" className="block hover:text-yellow-500">
+          <Link href="/about" className="block hover:text-yellow-500">
             ABOUT US
           </Link>
           <div className="space-y-1">
@@ -142,25 +142,25 @@ export default function Navbar() {
             </button>
             {showDropdown && (
               <div className="pl-4 space-y-1 text-sm">
-                <Link href="#" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-yellow-500">
                   Lighting Applications Services
                 </Link>
-                <Link href="#" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-yellow-500">
                   Lighting Control System Services
                 </Link>
-                <Link href="#" className="block hover:text-yellow-500">
+                <Link href="/services" className="block hover:text-yellow-500">
                   Upgrade LED & Retrofit Project
                 </Link>
               </div>
             )}
           </div>
-          <Link href="#" className="block hover:text-yellow-500">
+          <Link href="/projects" className="block hover:text-yellow-500">
             PROJECTS
           </Link>
-          <Link href="#" className="block hover:text-yellow-500">
+          <Link href="/partners" className="block hover:text-yellow-500">
             PARTNERS
           </Link>
-          <Link href="#" className="block hover:text-yellow-500">
+          <Link href="/contact-us" className="block hover:text-yellow-500">
             CONTACT US
           </Link>
         </div>
