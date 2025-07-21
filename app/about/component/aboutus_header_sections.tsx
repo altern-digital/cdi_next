@@ -19,7 +19,7 @@ export function AboutUsPageHeaderSection() {
       {/* Content */}
       <div className="relative z-10 text-center text-white p-4">
         <p className="text-sm uppercase tracking-widest mb-2">ABOUT US</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 className="text-5xl font-bold leading-tight">
           Welcome to PT Cahaya Desain Indonesia
         </h1>
       </div>

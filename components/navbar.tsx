@@ -1,30 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
-  const [showDropdown, setShowDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  // Optional: Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !(dropdownRef.current as any).contains(event.target)
-      ) {
-        setShowDropdown(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <nav className="bg-black text-white">
@@ -33,9 +14,9 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-4">
           <div className="flex items-center space-x-4">
             <div className="text-sm leading-tight uppercase">
-              <p className="text-white">PT. CAHAYA</p>
-              <p className="text-white">DESAIN</p>
-              <p className="text-white">INDONESIA</p>
+              <p>PT. CAHAYA</p>
+              <p>DESAIN</p>
+              <p>INDONESIA</p>
             </div>
             <img src="/logo.png" alt="CDI Logo" className="h-8 w-auto" />
           </div>
@@ -55,69 +36,79 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu for desktop */}
-        <ul className="hidden md:flex space-x-6 text-sm font-semibold">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6 text-sm font-semibold relative">
           <li>
-            <Link href="/" className="hover:text-blue-500">
+            <Link
+              href="/"
+              className="inline-block border-b-[3px] border-transparent hover:border-blue-500 transition"
+            >
               HOME
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-blue-500">
+            <Link
+              href="/about"
+              className="inline-block border-b-[3px] border-transparent hover:border-blue-500 transition"
+            >
               ABOUT US
             </Link>
           </li>
-          <li className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1 hover:text-blue-500"
-            >
+          {/* Dropdown on hover */}
+          <li className="relative group">
+            <button className="border-b-[3px] border-transparent hover:border-blue-500 flex items-center gap-2 transition">
               SERVICES <span className="text-xs">▼</span>
             </button>
-            {/* Dropdown */}
-            {showDropdown && (
-              <div className="absolute top-full mt-2 w-64 bg-black text-white shadow-lg z-50">
-                <ul className="text-sm py-2">
-                  <li>
-                    <Link
-                      href="/services"
-                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
-                    >
-                      Lighting Applications Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services"
-                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
-                    >
-                      Lighting Control System Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services"
-                      className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
-                    >
-                      Upgrade LED & Retrofit Project
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+            <div className="absolute top-full left-0 mt-2 w-64 bg-black text-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-2 z-50">
+              <ul className="text-sm py-2">
+                <li>
+                  <Link
+                    href="/services"
+                    className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
+                  >
+                    Lighting Applications Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
+                  >
+                    Lighting Control System Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="block px-4 py-2 hover:bg-blue-600 hover:text-white transition"
+                  >
+                    Upgrade LED & Retrofit Project
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
-            <Link href="/projects" className="hover:text-blue-500">
+            <Link
+              href="/projects"
+              className="inline-block border-b-[3px] border-transparent hover:border-blue-500 transition"
+            >
               PROJECTS
             </Link>
           </li>
           <li>
-            <Link href="partners" className="hover:text-blue-500">
+            <Link
+              href="/partners"
+              className="inline-block border-b-[3px] border-transparent hover:border-blue-500 transition"
+            >
               PARTNERS
             </Link>
           </li>
           <li>
-            <Link href="contact-us" className="hover:text-blue-500">
+            <Link
+              href="/contact-us"
+              className="inline-block border-b-[3px] border-transparent hover:border-blue-500 transition"
+            >
               CONTACT US
             </Link>
           </li>
@@ -127,40 +118,48 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-semibold">
-          <Link href="/" className="block hover:text-blue-500">
+          <Link
+            href="/"
+            className="block hover:border-b-[3px] border-transparent hover:border-blue-500 pb-1"
+          >
             HOME
           </Link>
-          <Link href="/about" className="block hover:text-blue-500">
+          <Link
+            href="/about"
+            className="block hover:border-b-[3px] border-transparent hover:border-blue-500 pb-1"
+          >
             ABOUT US
           </Link>
           <div className="space-y-1">
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1 hover:text-blue-500"
-            >
-              SERVICES <span className="text-xs">▼</span>
-            </button>
-            {showDropdown && (
-              <div className="pl-4 space-y-1 text-sm">
-                <Link href="/services" className="block hover:text-blue-500">
-                  Lighting Applications Services
-                </Link>
-                <Link href="/services" className="block hover:text-blue-500">
-                  Lighting Control System Services
-                </Link>
-                <Link href="/services" className="block hover:text-blue-500">
-                  Upgrade LED & Retrofit Project
-                </Link>
-              </div>
-            )}
+            <p className="font-semibold">SERVICES</p>
+            <div className="pl-4 space-y-1 text-sm">
+              <Link href="/services" className="block hover:text-blue-500">
+                Lighting Applications Services
+              </Link>
+              <Link href="/services" className="block hover:text-blue-500">
+                Lighting Control System Services
+              </Link>
+              <Link href="/services" className="block hover:text-blue-500">
+                Upgrade LED & Retrofit Project
+              </Link>
+            </div>
           </div>
-          <Link href="/projects" className="block hover:text-blue-500">
+          <Link
+            href="/projects"
+            className="block hover:border-b-[3px] border-transparent hover:border-blue-500 pb-1"
+          >
             PROJECTS
           </Link>
-          <Link href="/partners" className="block hover:text-blue-500">
+          <Link
+            href="/partners"
+            className="block hover:border-b-[3px] border-transparent hover:border-blue-500 pb-1"
+          >
             PARTNERS
           </Link>
-          <Link href="/contact-us" className="block hover:text-blue-500">
+          <Link
+            href="/contact-us"
+            className="block hover:border-b-[3px] border-transparent hover:border-blue-500 pb-1"
+          >
             CONTACT US
           </Link>
         </div>

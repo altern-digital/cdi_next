@@ -16,7 +16,7 @@ export default function ContactSection() {
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Let’s work together.
           </h2>
-          {/* <form className="space-y-4">
+          <form className="space-y-4">
             <input
               type="text"
               placeholder="Name *"
@@ -48,7 +48,7 @@ export default function ContactSection() {
             >
               Send
             </button>
-          </form> */}
+          </form>
         </div>
       </div>
     </section>

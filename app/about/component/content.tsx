@@ -7,13 +7,13 @@ export function Content() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column: Main Title and Text Content */}
           <div className="flex flex-col justify-start">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-4xl font-bold leading-tight">
               The Story <br /> Of Our Light
             </h2>
             {/* Blue Divider */}
             <div className="w-64 h-[2px] bg-blue-400 mt-4 mb-8"></div>
 
-            <div className="space-y-6 text-lg text-gray-300 mb-10 max-w-lg">
+            <div className="space-y-6 text-md text-gray-300 mb-10 max-w-lg">
               <p>
                 The Story began in 2004, when we are just a passionate team of
                 lighting "provider". We strive to learn every aspect of light
@@ -31,7 +31,7 @@ export function Content() {
 
             <a
               href="#" // Replace with actual profile URL
-              className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-300 self-start"
+              className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-gradient-to-r from-orange-500 to-purple-700 hover:text-white transition-all duration-300 self-start"
             >
               Company Profile
               <svg

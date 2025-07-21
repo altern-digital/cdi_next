@@ -85,21 +85,40 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/services"
-            className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
+            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
           >
-            View Services →
+            <span className="relative z-10 flex items-center gap-2">
+              View Services
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
           </Link>
+
           <Link
             href="/contact-us"
-            className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
+            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
           >
-            Contact us →
+            <span className="relative z-10 flex items-center gap-2">
+              Contact Us
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
           </Link>
           <Link
             href="/compro.pdf"
-            className="border border-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
+            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
           >
-            Company profile →
+            <span className="relative z-10 flex items-center gap-2">
+              Company Profile
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
           </Link>
         </div>
       </div>
