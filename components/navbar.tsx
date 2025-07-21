@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo kiri */}
         <Link href="/" className="flex items-center space-x-4">
           <div className="flex items-center space-x-4">
-            <div className="text-sm leading-tight uppercase">
+            <div className="text-sm leading-tight uppercase text-right">
               <p>PT. CAHAYA</p>
               <p>DESAIN</p>
               <p>INDONESIA</p>

@@ -57,7 +57,7 @@ export default function HeroSection() {
   return (
     <section className="w-full h-screen flex flex-col md:flex-row bg-black text-white relative">
       {/* Left Content */}
-      <div className="md:w-1/2 flex flex-col justify-center px-6 md:px-16 py-12 z-10">
+      <div className="md:w-1/2 flex flex-col justify-center px-6 md:px-52 py-12 z-10">
         {/* Prev button - hidden on small screens */}
         <button
           onClick={goToPrev}
@@ -74,7 +74,7 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-snug">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
           {slide.title}
         </h1>
 
@@ -85,40 +85,34 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/services"
-            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              View Services
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+            <span className="relative z-10">View Services</span>
+            <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              →
             </span>
-            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
 
           <Link
             href="/contact-us"
-            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              Contact Us
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+            <span className="relative z-10">Contact Us</span>
+            <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              →
             </span>
-            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
           <Link
             href="/compro.pdf"
-            className="relative px-6 py-3 text-sm font-semibold text-white border border-white transition-all duration-300 overflow-hidden group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              Company Profile
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+            <span className="relative z-10">Company Profile</span>
+            <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              →
             </span>
-            <span className="absolute inset-0 z-0 transition-all duration-300 bg-gradient-to-r from-orange-500 to-purple-700 opacity-0 group-hover:opacity-100" />
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
         </div>
       </div>

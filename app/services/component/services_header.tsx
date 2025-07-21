@@ -19,7 +19,7 @@ export function ServicesHeader() {
       {/* Content */}
       <div className="relative z-10 text-center text-white p-4">
         <p className="text-sm uppercase tracking-widest mb-2">Services</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold leading-tight">
           Core Speciality
         </h1>
       </div>

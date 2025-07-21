@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const services = [
   {
@@ -16,6 +19,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <section className="bg-[#1e1e1e] text-white py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
@@ -30,17 +35,32 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {services.map((service, index) => (
-          <div key={index} className="bg-[#2a2a2a] shadow-lg">
-            <div className="relative w-full h-96">
+          <div
+            key={index}
+            className="group relative bg-[#2a2a2a] border border-transparent rounded-lg overflow-hidden shadow-lg cursor-pointer"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {/* Image */}
+            <div className="relative w-full h-[500px]">
               <Image
                 src={service.img}
                 alt={service.title}
                 fill
-                className="object-cover"
+                className="object-cover px-2 transition duration-300 group-hover:scale-105 hover:opacity-50"
               />
             </div>
-            <div className="p-4 text-center text-sm font-medium">
-              {service.title}
+
+            {/* Text Area */}
+            <div
+              className={`relative text-center p-4 text-sm font-medium z-10 ${
+                hoveredIndex === index
+                  ? "bg-gradient-to-r from-orange-500 to-purple-700"
+                  : "bg-[#2a2a2a]"
+              }`}
+            >
+              <p className="uppercase text-white/70 text-xs mb-1">Service</p>
+              <h3 className="font-semibold text-white">{service.title}</h3>
             </div>
           </div>
         ))}

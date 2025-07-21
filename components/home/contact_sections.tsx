@@ -44,9 +44,10 @@ export default function ContactSection() {
             ></textarea>
             <button
               type="submit"
-              className="w-full border border-white px-4 py-2 text-sm hover:bg-white hover:text-black transition"
+              className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group w-full"
             >
-              Send
+              <span className="relative z-10 text-center w-full">Submit</span>
+              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
             </button>
           </form>
         </div>

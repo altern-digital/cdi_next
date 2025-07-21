@@ -20,7 +20,7 @@ export default function ProjectsHero() {
         <p className="text-sm uppercase tracking-widest mb-2">
           Great things we’ve done
         </p>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Projects</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
         <p className="max-w-2xl text-sm md:text-lg leading-relaxed">
           The projects are built by the best talent and using latest
           technologies. The advantages of our building methods and expertise
