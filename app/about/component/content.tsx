@@ -1,8 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+
+const services = [
+  {
+    title: "Lighting Applications Services",
+    img: "/lighting_application.jpg",
+  },
+  {
+    title: "Lighting Control System Services",
+    img: "/lighting_control.jpg",
+  },
+  {
+    title: "Upgrade LED & Retrofit Project",
+    img: "/upgrade_LED.jpg",
+  },
+];
 
 export function Content() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
-    <section className="bg-[#222222] text-white py-16 md:py-24">
+    <section className="bg-[#222222] text-white py-16 md:py-24 flex flex-col items-center">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column: Main Title and Text Content */}
@@ -119,6 +138,44 @@ export function Content() {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 py-12">
+        <h3 className="text-center text-lg text-white font-semibold mb-8">
+          LEARN MORE ABOUT THE SERVICES WE OFFER
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group relative bg-[#2a2a2a] border border-transparent rounded-lg overflow-hidden shadow-lg cursor-pointer transition-all duration-300"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {/* Image */}
+              <div className="relative w-full h-[500px]">
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-105 hover:opacity-50"
+                />
+              </div>
+
+              {/* Text Area */}
+              <div
+                className={`relative text-center p-4 text-sm font-medium z-10 transition-colors duration-300 ${
+                  hoveredIndex === index
+                    ? "bg-gradient-to-r from-orange-500 to-purple-700"
+                    : "bg-[#2a2a2a]"
+                }`}
+              >
+                <p className="uppercase text-white/70 text-xs mb-1">Service</p>
+                <h3 className="font-semibold text-white">{service.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
