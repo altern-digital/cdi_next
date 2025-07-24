@@ -24,7 +24,7 @@ export default function PartnersSection() {
                 alt={`Partner logo ${index + 1}`}
                 width={160}
                 height={100}
-                className="object-contain"
+                className="object-contain grayscale"
               />
             </div>
           ))}

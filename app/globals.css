@@ -121,6 +121,10 @@
   }
 }
 
+* {
+  scrollbar-width: none;
+}
+
 body {
   background: #000;
 }

@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700">
         {/* About Us */}
         <div>
-          <h3 className="text-blue-500 font-semibold mb-2">About Us</h3>
+          <h3 className="text-blue-300 font-semibold mb-2">About Us</h3>
           <p className="text-xs text-gray-400 leading-relaxed">
             The story began in 2004, when we were just a passionate team of
             lighting “provider”. Ten years later, Cahaya Desain Indonesia was
@@ -18,7 +18,7 @@ export default function Footer() {
 
         {/* Information */}
         <div>
-          <h3 className="text-blue-500 font-semibold mb-2">Information</h3>
+          <h3 className="text-blue-300 font-semibold mb-2">Information</h3>
           <ul className="space-y-2 text-gray-400">
             <li>
               <Link href="/about">About Us</Link>
@@ -37,7 +37,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h3 className="text-blue-500 font-semibold mb-2">Services</h3>
+          <h3 className="text-blue-300 font-semibold mb-2">Services</h3>
           <ul className="space-y-2 text-gray-400">
             <li>
               <Link href="/services">Lighting Applications Services</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Contact Us */}
         <div>
-          <h3 className="text-blue-500 font-semibold mb-2">Contact Us</h3>
+          <h3 className="text-blue-300 font-semibold mb-2">Contact Us</h3>
           <p className="text-xs text-gray-400 leading-relaxed">
             Jl. Bandengan Selatan No.43
             <br />

@@ -30,7 +30,7 @@ export function Content() {
               The Story <br /> Of Our Light
             </h2>
             {/* Blue Divider */}
-            <div className="w-64 h-[2px] bg-blue-400 mt-4 mb-8"></div>
+            <div className="w-64 h-[2px] bg-blue-300 mt-4 mb-8"></div>
 
             <div className="space-y-6 text-md text-gray-300 mb-10 max-w-lg">
               <p>
@@ -50,7 +50,7 @@ export function Content() {
 
             <a
               href="#" // Replace with actual profile URL
-              className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-gradient-to-r from-orange-500 to-purple-700 hover:text-white transition-all duration-300 self-start"
+              className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-gradient-to-r from-cyan-500 to-blue-300 hover:text-white transition-all duration-300 self-start"
             >
               Company Profile
               <svg
@@ -78,7 +78,7 @@ export function Content() {
                 Creating Customer Oriented <br className="hidden md:block" />
                 “Relationship”
               </h3>
-              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-300 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 Building trust and loyalty is key to successful, long-term
                 partnerships with our clients.
@@ -100,7 +100,7 @@ export function Content() {
                 Provide the best <br className="hidden md:block" />
                 Product & Service”
               </h3>
-              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-300 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 We make sure the best product for every customer design, the
                 best products for every customer expectation.
@@ -122,7 +122,7 @@ export function Content() {
                 Creative, Innovation & <br className="hidden md:block" />
                 Intuitive
               </h3>
-              <div className="w-full h-[2px] bg-blue-400 mb-2"></div>
+              <div className="w-full h-[2px] bg-blue-300 mb-2"></div>
               <p className="relative z-10 text-sm text-gray-100">
                 Consulting the best choice of product in Creative, Innovative &
                 Intuitive ways possible.
@@ -167,7 +167,7 @@ export function Content() {
               <div
                 className={`relative text-center p-4 text-sm font-medium z-10 transition-colors duration-300 ${
                   hoveredIndex === index
-                    ? "bg-gradient-to-r from-orange-500 to-purple-700"
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-300"
                     : "bg-[#2a2a2a]"
                 }`}
               >

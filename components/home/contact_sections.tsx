@@ -10,7 +10,7 @@ export default function ContactSection() {
     >
       <div className="max-w-6xl mx-auto px-4 flex justify items-center">
         <div className="bg-[#2a2a2a] text-white p-8 md:p-10 shadow-lg max-w-md w-full">
-          <p className="text-sm uppercase text-blue-500 mb-2 font-semibold">
+          <p className="text-sm uppercase text-blue-300 mb-2 font-semibold">
             Get Free Quote
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -47,7 +47,7 @@ export default function ContactSection() {
               className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group w-full"
             >
               <span className="relative z-10 text-center w-full">Submit</span>
-              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
             </button>
           </form>
         </div>

@@ -68,7 +68,7 @@ export default function ProjectContent() {
             <div
               className={`text-center py-4 ${
                 highlightedProject === index
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-500"
+                  ? "bg-gradient-to-r from-cyan-500 to-blue-300"
                   : ""
               }`}
             >

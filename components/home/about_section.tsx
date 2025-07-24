@@ -11,9 +11,9 @@ export default function AboutSection() {
       />
 
       {/* Overlay & Content */}
-      <div className="absolute inset-0 bg-opacity-50 z-10 flex justify-end items-center px-4 md:px-52">
+      <div className="absolute inset-0 bg-opacity-50 z-10 flex justify-end items-center px-4 container mx-auto">
         <div className="bg-[#2a2a2a] text-white max-w-lg p-12 md:p-10 shadow-lg">
-          <p className="text-sm uppercase text-blue-500 tracking-wider mb-2">
+          <p className="text-sm uppercase text-blue-300 tracking-wider mb-2">
             About Us
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -35,7 +35,7 @@ export default function AboutSection() {
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
               →
             </span>
-            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
         </div>
       </div>

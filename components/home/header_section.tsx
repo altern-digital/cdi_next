@@ -67,7 +67,7 @@ export default function HeroSection() {
         </button>
 
         <div className="text-sm tracking-widest text-gray-400 mb-4">
-          <span className="inline-block w-10 h-[2px] bg-white mr-2 align-middle" />
+          <span className="inline-block w-10 h-[2px] bg-white mr-2 align-middle " />
           <span className="align-middle">
             {String(current + 1).padStart(2, "0")} /{" "}
             {String(slides.length).padStart(2, "0")}
@@ -91,7 +91,7 @@ export default function HeroSection() {
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
               →
             </span>
-            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
 
           <Link
@@ -102,7 +102,7 @@ export default function HeroSection() {
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
               →
             </span>
-            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
           <Link
             href="/compro.pdf"
@@ -112,7 +112,7 @@ export default function HeroSection() {
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
               →
             </span>
-            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-orange-500 before:to-purple-700 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+            <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
           </Link>
         </div>
       </div>
