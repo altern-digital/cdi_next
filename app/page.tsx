@@ -1,17 +1,18 @@
-import Navbar from "../components/navbar";
-import HeroSection from "../components/home/header_section";
-import Services from "../components/home/services_section";
-import AboutSection from "../components/home/about_section";
-import ProjectsSection from "../components/home/project_section";
-import PartnersSection from "../components/home/partner_section";
-import ContactSection from "../components/home/contact_sections";
-import Footer from "../components/footer_section";
+"use client";
+
+import React from "react";
+import { HeroSection } from "@/components/home/HeroSection";
+import { ServicesSection } from "@/components/home/ServicesSection";
+import { AboutSection } from "@/components/home/AboutSection";
+import { ProjectsSection } from "@/components/home/ProjectsSection";
+import { PartnersSection } from "@/components/home/PartnersSection";
+import { ContactSection } from "@/components/home/ContactSection";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <Services />
+      <ServicesSection />
       <AboutSection />
       <ProjectsSection />
       <PartnersSection />

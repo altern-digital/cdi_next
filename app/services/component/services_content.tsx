@@ -1,6 +1,32 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+// From: components/home/services_section.tsx
+const services = [
+  {
+    title: "Lighting Applications Services",
+    img: "/lighting_application.jpg",
+    href: "/services/lighting_application",
+  },
+  {
+    title: "Lighting Control System Services",
+    img: "/lighting_control.jpg",
+    href: "/services/lighting_control",
+  },
+  {
+    title: "Upgrade LED & Retrofit Project",
+    img: "/upgrade_LED.jpg",
+    href: "/services/upgrade_led",
+  },
+];
 
 export default function ServicesContent() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const router = useRouter();
+
   return (
     <section className="bg-[#222222] text-white py-16 md:py-24">
       <div className="container mx-auto px-6">
@@ -24,51 +50,45 @@ export default function ServicesContent() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="bg-[#2a2a2a] shadow-md">
-            <div className="relative w-full h-96">
-              <Image
-                src="/lighting_application.jpg"
-                alt="Lighting Applications Services"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="text-center py-4 text-sm font-medium">
-              Lighting Applications Services
-            </div>
-          </div>
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[1200px] mx-auto">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group relative bg-[#2a2a2a] border border-transparent overflow-hidden shadow-lg cursor-pointer"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => router.push(service.href)}
+              tabIndex={0}
+              role="button"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  router.push(service.href);
+                }
+              }}
+            >
+              {/* Image */}
+              <div className="relative w-full h-[500px]">
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  fill
+                  className="object-cover px-2 transition duration-300 group-hover:scale-105 hover:opacity-50"
+                />
+              </div>
 
-          {/* Card 2 */}
-          <div className="bg-[#2a2a2a] shadow-md">
-            <div className="relative w-full h-96">
-              <Image
-                src="/lighting_control.jpg"
-                alt="Lighting Control System Services"
-                layout="fill"
-                objectFit="cover"
-              />
+              {/* Text Area */}
+              <div
+                className={`relative text-center p-4 text-sm font-medium z-10 ${
+                  hoveredIndex === index
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-300"
+                    : "bg-[#2a2a2a]"
+                }`}
+              >
+                <p className="uppercase text-white/70 text-xs mb-1">Service</p>
+                <h3 className="font-semibold text-white">{service.title}</h3>
+              </div>
             </div>
-            <div className="text-center py-4 text-sm font-medium">
-              Lighting Control System Services
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-[#2a2a2a] shadow-md">
-            <div className="relative w-full h-96">
-              <Image
-                src="/upgrade_LED.jpg"
-                alt="Upgrade LED & Retrofit Project"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="text-center py-4 text-sm font-medium">
-              Upgrade LED & Retrofit Project
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

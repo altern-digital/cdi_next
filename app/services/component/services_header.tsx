@@ -25,10 +25,12 @@ export function ServicesHeader() {
       </div>
 
       {/* Breadcrumb Bar (Bottom) */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[#111] text-gray-300 text-sm px-6 py-3 z-20">
-        <span className="mr-2">PT Cahaya Desain Indonesia</span>
-        <span className="mx-2">{`>`}</span>
-        <span>Services</span>
+      <div className="absolute bottom-0 left-0 right-0 bg-[#111] text-gray-300 text-sm px-6 py-3 z-20 w-full">
+        <div className="container mx-auto w-full">
+          <span className="mr-2">PT Cahaya Desain Indonesia</span>
+          <span className="mx-2">{`>`}</span>
+          <span>Services</span>
+        </div>
       </div>
     </section>
   );

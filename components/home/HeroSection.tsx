@@ -1,23 +1,22 @@
-"use client";
-
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { useRef, useState, useEffect } from "react";
 
+// From: components/home/header_section.tsx
 const slides = [
   {
     image: "/header.jpg",
     title: "Welcoming a Smart, Beautiful, and Bright City",
-    description: `Make your building beautiful with our lighting solutions, with warm and dynamic lighting that can change color. 
-With a technology system on the lights that can regulate dark and light conditions, 
-you can control the lights according to your wishes.`,
+    description: `Make your building beautiful with our lighting solutions, with warm and dynamic lighting that can change color. 
+  With a technology system on the lights that can regulate dark and light conditions, 
+  you can control the lights according to your wishes.`,
   },
   {
     image: "/gwk.jpg",
     title: "Innovative Lighting Systems for Modern Buildings",
-    description: `From architecture to ambiance, our lighting adapts to your vision. 
-Control the mood of your building like never before.`,
+    description: `From architecture to ambiance, our lighting adapts to your vision. 
+  Control the mood of your building like never before.`,
   },
   {
     image: "/mandiri.jpg",
@@ -31,7 +30,7 @@ Control the mood of your building like never before.`,
   },
 ];
 
-export default function HeroSection() {
+export function HeroSection() {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -51,6 +50,18 @@ export default function HeroSection() {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 7000);
   };
+
+  // Initialize auto-slide only on client side
+  useEffect(() => {
+    resetAutoSlide();
+
+    // Cleanup on unmount
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   const slide = slides[current];
 
@@ -85,7 +96,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/services"
-            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
             <span className="relative z-10">View Services</span>
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
@@ -96,7 +107,7 @@ export default function HeroSection() {
 
           <Link
             href="/contact-us"
-            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
             <span className="relative z-10">Contact Us</span>
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
@@ -106,7 +117,7 @@ export default function HeroSection() {
           </Link>
           <Link
             href="/compro.pdf"
-            className="relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
+            className="relative inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group"
           >
             <span className="relative z-10">Company Profile</span>
             <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
@@ -123,7 +134,7 @@ export default function HeroSection() {
           src={slide.image}
           alt={slide.title}
           fill
-          className="object-cover brightness-75 transition duration-1000"
+          className="object-cover brightness-75 opacity-50 hover:opacity-75 transition duration-1000"
         />
 
         {/* Next button - hidden on small screens */}
