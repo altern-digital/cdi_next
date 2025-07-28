@@ -12,25 +12,25 @@ const projects = [
 
 export function ProjectsSection() {
   const [startIndex, setStartIndex] = useState(0);
-  const visibleImages = 4;
+  const visibleImages = 7;
 
   const prev = () => {
-    setStartIndex((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
-  const next = () => {
-    setStartIndex((prev) => (prev + 1) % projects.length);
-  };
-
-  const getVisibleProjects = () => {
-    return [...projects, ...projects].slice(
-      startIndex,
-      startIndex + visibleImages
+    setStartIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
     );
   };
 
+  const next = () => {
+    setStartIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const getVisibleProjects = () => {
+    const doubled = [...projects, ...projects]; // so it can wrap around
+    return doubled.slice(startIndex, startIndex + visibleImages);
+  };
+
   return (
-    <section className="bg-[#1e1e1e] text-white py-16">
+    <section className="bg-[#1e1e1e] text-white py-16 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <p className="text-sm text-blue-300 uppercase font-semibold">
@@ -42,15 +42,24 @@ export function ProjectsSection() {
           <div className="h-1 w-20 bg-blue-300 mt-4 mx-auto"></div>
         </div>
 
-        <div className="relative w-full">
-          {/* Carousel */}
-          <div className="flex overflow-hidden">
-            {getVisibleProjects().map((src, i) => (
+        <div className="relative w-full overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${
+                (startIndex % projects.length) * (100 / visibleImages)
+              }%)`,
+              width: `${
+                (projects.length + visibleImages) * (100 / visibleImages)
+              }%`,
+            }}
+          >
+            {[...projects, ...projects].map((src, i) => (
               <img
                 key={i}
                 src={src}
                 alt={`Project ${i + 1}`}
-                className="w-[25%] object-cover opacity-50 hover:opacity-75 transition duration-500"
+                className="w-[14.2857%] object-cover opacity-50 hover:opacity-75 transition duration-500"
               />
             ))}
           </div>
@@ -58,13 +67,13 @@ export function ProjectsSection() {
           {/* Navigation arrows */}
           <button
             onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-2"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-2 z-10"
           >
             <ChevronLeftIcon className="w-6 h-6" />
           </button>
           <button
             onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-2"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-2 z-10"
           >
             <ChevronRightIcon className="w-6 h-6" />
           </button>
@@ -72,4 +81,4 @@ export function ProjectsSection() {
       </div>
     </section>
   );
-} 
+}

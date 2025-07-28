@@ -58,8 +58,8 @@ export function Content() {
               </p>
             </div>
 
-            <a
-              href="#" // Replace with actual profile URL
+            <Link
+              href="/compro.pdf"
               className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-gradient-to-r from-cyan-500 to-blue-300 hover:text-white transition-all duration-300 self-start"
             >
               Company Profile
@@ -77,7 +77,7 @@ export function Content() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Right Column: Grid of Cards */}

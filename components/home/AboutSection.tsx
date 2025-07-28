@@ -16,7 +16,7 @@ export function AboutSection() {
       {/* Overlay & Content */}
       <div className="absolute inset-0 bg-opacity-50 z-10 flex justify-end items-center px-4">
         <div className="container mx-auto flex justify-end items-center">
-          <div className="bg-[#2a2a2a] text-white max-w-lg p-12 md:p-10 shadow-lg">
+          <div className="bg-[#2a2a2a]/75 text-white max-w-lg p-12 md:p-10 shadow-lg">
             <p className="text-sm uppercase text-blue-300 tracking-wider mb-2">
               About Us
             </p>
@@ -47,4 +47,4 @@ export function AboutSection() {
       </div>
     </section>
   );
-} 
+}

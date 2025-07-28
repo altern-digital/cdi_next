@@ -21,13 +21,13 @@ export function PartnersSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center justify-items-center">
           {partners.map((item, index) => (
-            <div key={index} className="w-40 h-auto">
+            <div key={index} className="w-40 h-auto group">
               <Image
                 src={getS3Url(item.logo.filename_disk)}
                 alt={`Partner logo ${index + 1}`}
                 width={160}
                 height={100}
-                className="object-contain grayscale"
+                className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0"
               />
             </div>
           ))}
@@ -35,4 +35,4 @@ export function PartnersSection() {
       </div>
     </section>
   );
-} 
+}

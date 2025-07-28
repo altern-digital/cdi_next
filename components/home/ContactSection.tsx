@@ -14,7 +14,7 @@ export function ContactSection() {
       {/* Background overlay for opacity */}
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       <div className="container mx-auto px-4 flex justify items-center relative z-10">
-        <div className="bg-[#2a2a2a] text-white p-8 md:p-10 shadow-lg max-w-md w-full">
+        <div className="bg-[#2a2a2a]/75 text-white p-8 md:p-10 shadow-lg max-w-md w-full">
           <p className="text-sm uppercase text-blue-300 mb-2 font-semibold">
             Get Free Quote
           </p>
@@ -88,4 +88,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-} 
+}
