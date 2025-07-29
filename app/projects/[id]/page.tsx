@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { getS3Url } from "@/app/utils/s3File";
-import Image from "next/image";
+import { Image } from "antd";
 import { useParams, useRouter } from "next/navigation";
+import "antd/dist/reset.css";
 
 interface ProjectData {
   id: string;
@@ -80,7 +81,7 @@ export default function Page() {
 
       {/* Cover Image */}
       <div className="flex justify-center mt-8">
-        <div className="relative w-full max-w-3xl aspect-[16/9] bg-[#222] rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-3xl bg-[#222] rounded-lg overflow-hidden shadow-lg">
           <Image
             src={
               project.cover && project.cover.filename_disk
@@ -88,9 +89,11 @@ export default function Page() {
                 : "/placeholder.png"
             }
             alt={project.title}
-            fill
-            className="object-cover"
-            priority
+            className="w-full h-full object-contain"
+            preview={{
+              mask: "Click to preview",
+              maskClassName: "text-white",
+            }}
           />
         </div>
       </div>
@@ -101,22 +104,20 @@ export default function Page() {
           <h2 className="text-2xl font-semibold mb-6 text-center">Gallery</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {project.gallery.map((item) => (
-              <div
+              <Image
                 key={item.id}
-                className="relative w-full aspect-[4/3] bg-[#181818] rounded-lg overflow-hidden shadow"
-              >
-                <Image
-                  src={
-                    item.directus_files_id &&
-                    item.directus_files_id.filename_disk
-                      ? getS3Url(item.directus_files_id.filename_disk)
-                      : "/placeholder.png"
-                  }
-                  alt={`Gallery image ${item.id}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+                src={
+                  item.directus_files_id && item.directus_files_id.filename_disk
+                    ? getS3Url(item.directus_files_id.filename_disk)
+                    : "/placeholder.png"
+                }
+                alt={`Gallery image ${item.id}`}
+                className="w-full h-full object-contain"
+                preview={{
+                  mask: "Click to preview",
+                  maskClassName: "text-white",
+                }}
+              />
             ))}
           </div>
         </section>
