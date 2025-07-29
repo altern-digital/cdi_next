@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
+import { easeOutExpo } from "easing-utils";
 
 // Add slug for each service, matching the navbar
 const services = [
@@ -28,7 +30,13 @@ export function ServicesSection() {
 
   return (
     <section className="bg-[#1e1e1e] text-white py-20 w-full">
-      <div className="container mx-auto px-4">
+      <motion.div
+        className="container mx-auto px-4"
+        initial={{ opacity: 0, y: 64 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeOutExpo, delay: 0.25 }}
+      >
         <div className="text-center">
           <p className="text-sm uppercase text-blue-300 tracking-wider mb-2">
             Services
@@ -72,7 +80,7 @@ export function ServicesSection() {
             </Link>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

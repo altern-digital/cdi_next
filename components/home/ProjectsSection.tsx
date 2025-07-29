@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { motion } from "motion/react";
+import { easeOutExpo } from "easing-utils";
 
 const projects = [
   "/project1.jpg",
@@ -24,14 +26,15 @@ export function ProjectsSection() {
     setStartIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
-  const getVisibleProjects = () => {
-    const doubled = [...projects, ...projects]; // so it can wrap around
-    return doubled.slice(startIndex, startIndex + visibleImages);
-  };
-
   return (
     <section className="bg-[#1e1e1e] text-white py-16 overflow-hidden">
-      <div className="container mx-auto px-4">
+      <motion.div
+        className="container mx-auto px-4"
+        initial={{ opacity: 0, y: 64 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeOutExpo, delay: 0.25 }}
+      >
         <div className="text-center mb-10">
           <p className="text-sm text-blue-300 uppercase font-semibold">
             Projects
@@ -78,7 +81,7 @@ export function ProjectsSection() {
             <ChevronRightIcon className="w-6 h-6" />
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

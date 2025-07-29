@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getS3Url } from "@/app/utils/s3File";
+import { motion } from "motion/react";
+import { easeOutExpo } from "easing-utils";
 
 export function PartnersSection() {
   const [partners, setPartners] = useState<any[]>([]);
@@ -18,7 +20,13 @@ export function PartnersSection() {
 
   return (
     <section className="bg-[#0f0f0f] py-16">
-      <div className="container mx-auto px-4">
+      <motion.div
+        className="container mx-auto px-4"
+        initial={{ opacity: 0, y: 64 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeOutExpo, delay: 0.25 }}
+      >
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center justify-items-center">
           {partners.map((item, index) => (
             <div key={index} className="w-40 h-auto group">
@@ -32,7 +40,7 @@ export function PartnersSection() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

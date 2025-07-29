@@ -2,6 +2,8 @@
 
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { motion } from "motion/react";
+import { easeOutExpo } from "easing-utils";
 
 export function ContactSection() {
   return (
@@ -13,7 +15,13 @@ export function ContactSection() {
     >
       {/* Background overlay for opacity */}
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-      <div className="container mx-auto px-4 flex justify items-center relative z-10">
+      <motion.div
+        className="container mx-auto px-4 flex justify items-center relative z-10"
+        initial={{ opacity: 0, y: 64 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeOutExpo, delay: 0.25 }}
+      >
         <div className="bg-[#2a2a2a]/75 text-white p-8 md:p-10 shadow-lg max-w-md w-full">
           <p className="text-sm uppercase text-blue-300 mb-2 font-semibold">
             Get Free Quote
@@ -85,7 +93,7 @@ export function ContactSection() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
