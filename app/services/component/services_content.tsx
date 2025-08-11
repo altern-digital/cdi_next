@@ -29,9 +29,9 @@ export default function ServicesContent() {
 
   return (
     <section className="bg-[#222222] text-white py-16 md:py-24">
-      <div className="container mx-auto px-6">
+      <div className="px-6 ">
         {/* Header Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 container mx-auto">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               We provide complete project <br /> lighting solutions.
@@ -50,7 +50,7 @@ export default function ServicesContent() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[1200px] mx-auto">
+        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}
@@ -67,7 +67,7 @@ export default function ServicesContent() {
               }}
             >
               {/* Image */}
-              <div className="relative w-full h-[500px]">
+              <div className="relative w-full h-[75vh]">
                 <Image
                   src={service.img}
                   alt={service.title}

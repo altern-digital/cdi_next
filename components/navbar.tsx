@@ -21,10 +21,10 @@ const UnderlineLink = ({
     className={`relative inline-block text-white hover:text-white transition-all duration-150 group ${className}`}
   >
     {children}
-    <span className="absolute bottom-[-24px] left-1/2 w-0 h-1 bg-blue-400 transition-all duration-150 group-hover:w-full group-hover:left-0 overflow-hidden">
+    <span className="absolute bottom-[-24px] left-1/2 w-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-300 transition-all duration-150 group-hover:w-full group-hover:left-0 overflow-hidden">
       <motion.span
         layoutId="underline"
-        className="block h-full bg-blue-400"
+        className="block h-full"
         initial={{ width: 0, left: "50%" }}
         whileHover={{ width: "100%", left: 0 }}
         transition={{ duration: 0.3, ease: easeOutExpo }}
@@ -139,7 +139,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 8, pointerEvents: "auto" }}
                   exit={{ opacity: 0, y: 32, pointerEvents: "none" }}
                   transition={{ duration: 0.25, ease: easeOutExpo }}
-                  className="absolute top-full left-0 mt-4 w-80 bg-blue-600 text-white shadow-lg z-50 rounded-none"
+                  className="absolute top-full left-0 mt-4 w-80 bg-gradient-to-r from-cyan-500 to-blue-300 text-white shadow-lg z-50 rounded-none"
                   style={{ pointerEvents: isServicesOpen ? "auto" : "none" }}
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}

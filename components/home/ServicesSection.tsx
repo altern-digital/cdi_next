@@ -31,7 +31,7 @@ export function ServicesSection() {
   return (
     <section className="bg-[#1e1e1e] text-white py-20 w-full">
       <motion.div
-        className="container mx-auto px-4"
+        className="px-4"
         initial={{ opacity: 0, y: 64 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -47,7 +47,7 @@ export function ServicesSection() {
           <div className="w-64 h-[2px] bg-blue-300 mx-auto my-12" />
         </div>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[1200px] mx-auto">
+        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {services.map((service, index) => (
             <Link
               key={index}
@@ -57,7 +57,7 @@ export function ServicesSection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Image */}
-              <div className="relative w-full h-[500px]">
+              <div className="relative w-full h-[75vh]">
                 <Image
                   src={service.img}
                   alt={service.title}

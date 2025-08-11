@@ -31,9 +31,9 @@ export function Content() {
   } as any;
 
   return (
-    <section className="bg-[#222222] text-white py-16 md:py-24 flex flex-col items-center">
+    <section className="bg-[#222222] text-white flex flex-col items-center">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 py-16">
           {/* Left Column: Main Title and Text Content */}
           <div className="flex flex-col justify-start">
             <h2 className="text-4xl font-bold leading-tight">

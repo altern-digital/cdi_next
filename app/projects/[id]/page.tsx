@@ -81,7 +81,7 @@ export default function Page() {
 
       {/* Cover Image */}
       <div className="flex justify-center mt-8">
-        <div className="relative w-full max-w-3xl bg-[#222] rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-3xl bg-[#222] overflow-hidden shadow-lg">
           <Image
             src={
               project.cover && project.cover.filename_disk
@@ -100,7 +100,7 @@ export default function Page() {
 
       {/* Gallery */}
       {project.gallery && project.gallery.length > 0 && (
-        <section className="max-w-5xl mx-auto mt-12 px-4">
+        <section className="max-w-5xl mx-auto py-12 px-4">
           <h2 className="text-2xl font-semibold mb-6 text-center">Gallery</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {project.gallery.map((item) => (
