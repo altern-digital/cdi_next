@@ -50,7 +50,7 @@ export default function ServicesContent() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 container mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
@@ -67,7 +67,7 @@ export default function ServicesContent() {
               }}
             >
               {/* Image */}
-              <div className="relative w-full h-[75vh]">
+              <div className="relative w-full h-[50vh]">
                 <Image
                   src={service.img}
                   alt={service.title}

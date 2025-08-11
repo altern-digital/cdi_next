@@ -47,7 +47,7 @@ export function ServicesSection() {
           <div className="w-64 h-[2px] bg-blue-300 mx-auto my-12" />
         </div>
 
-        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 container mx-auto">
           {services.map((service, index) => (
             <Link
               key={index}
@@ -57,7 +57,7 @@ export function ServicesSection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Image */}
-              <div className="relative w-full h-[75vh]">
+              <div className="relative w-full h-[50vh]">
                 <Image
                   src={service.img}
                   alt={service.title}
