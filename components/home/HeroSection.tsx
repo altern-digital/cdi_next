@@ -202,43 +202,44 @@ export function HeroSection() {
             </AnimatePresence>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 w-full">
+          <div className="flex flex-col xl:flex-row gap-3 sm:gap-4 w-full mt-8">
             <Link
               href="/services"
-              className="relative inline-flex items-center gap-2 px-8 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group hover:scale-100 w-full sm:w-auto justify-center"
+              className="group relative flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 text-xs font-semibold text-white border border-white transition-all duration-300 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded w-full sm:w-auto"
             >
-              <span className="relative z-10 text-ellipsis whitespace-nowrap">
+              <span className="relative z-10 whitespace-nowrap">
                 View Services
               </span>
-              <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+              <span className="pointer-events-none absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-[''] rounded"></span>
             </Link>
-
             <Link
               href="/contact-us"
-              className="relative inline-flex items-center gap-2 px-8 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group hover:scale-100 w-full sm:w-auto justify-center"
+              className="group relative flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 text-xs font-semibold text-white border border-white transition-all duration-300 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded w-full sm:w-auto"
             >
-              <span className="relative z-10 text-ellipsis whitespace-nowrap">
+              <span className="relative z-10 whitespace-nowrap">
                 Contact Us
               </span>
-              <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+              <span className="pointer-events-none absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-[''] rounded"></span>
             </Link>
             <Link
               href="/compro.pdf"
-              className="relative inline-flex items-center gap-2 px-8 py-3 text-xs font-semibold text-white border border-white overflow-hidden transition-all duration-300 group hover:scale-100 w-full sm:w-auto justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 text-xs font-semibold text-white border border-white transition-all duration-300 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded w-full sm:w-auto"
             >
-              <span className="relative z-10 text-ellipsis whitespace-nowrap">
+              <span className="relative z-10 whitespace-nowrap">
                 Company Profile
               </span>
-              <span className="relative z-10 transition-transform duration-300 transform group-hover:translate-x-1">
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-              <span className="absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-['']"></span>
+              <span className="pointer-events-none absolute inset-0 z-0 before:absolute before:inset-0 before:scale-x-0 before:origin-left before:bg-gradient-to-r before:from-cyan-500 before:to-blue-300 before:transition-transform before:duration-500 group-hover:before:scale-x-100 before:z-0 before:content-[''] rounded"></span>
             </Link>
           </div>
         </div>
