@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useState, FC } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ServiceItem {
   title: string;
@@ -64,40 +65,38 @@ const ServicesItemContent: FC<ServicesItemContentProps> = ({
 
         <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 container mx-auto">
           {currentServices.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative bg-[#2a2a2a] border border-transparent overflow-hidden shadow-lg cursor-pointer"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              onClick={() => router.push(service.href)}
+              href={service.href}
+              className="group relative bg-[#2a2a2a] border border-transparent overflow-hidden shadow-lg cursor-pointer outline-none"
               tabIndex={0}
-              role="button"
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  router.push(service.href);
-                }
-              }}
             >
-              <div className="relative w-full h-[50vh]">
-                <Image
-                  src={service.img}
-                  alt={service.title}
-                  fill
-                  className="object-cover px-2 transition duration-300 group-hover:scale-105 hover:opacity-50"
-                />
-              </div>
-
               <div
-                className={`relative text-center p-4 text-sm font-medium z-10 ${
-                  hoveredIndex === index
-                    ? "bg-gradient-to-r from-cyan-500 to-blue-300"
-                    : "bg-[#2a2a2a]"
-                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                <p className="uppercase text-white/70 text-xs mb-1">Service</p>
-                <h3 className="font-semibold text-white">{service.title}</h3>
+                <div className="relative w-full h-[50vh]">
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    className="object-cover px-2 transition duration-300 group-hover:scale-105 hover:opacity-50"
+                  />
+                </div>
+                <div
+                  className={`relative text-center p-4 text-sm font-medium z-10 ${
+                    hoveredIndex === index
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-300"
+                      : "bg-[#2a2a2a]"
+                  }`}
+                >
+                  <p className="uppercase text-white/70 text-xs mb-1">
+                    Service
+                  </p>
+                  <h3 className="font-semibold text-white">{service.title}</h3>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

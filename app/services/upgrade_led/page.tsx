@@ -1,13 +1,13 @@
 import React from "react";
 
-import { ServicesItemHeader } from "../component/services_item_header";
-import ServicesItemContent from "../component/services_item_content";
+import { UpgradeLedHeader } from "./component/upgrade_led_header";
+import UpgradeLedContent from "./component/upgrade_led_content";
 
 function page() {
   return (
     <div className="min-h-screen">
-      <ServicesItemHeader />
-      <ServicesItemContent />
+      <UpgradeLedHeader />
+      <UpgradeLedContent />
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-import { ServicesItemHeader } from "../component/services_item_header";
-import ServicesItemContent from "../component/services_item_content";
+import LightingControlContent from "./component/lighting_control_content";
+import { LightingControlHeader } from "./component/lighting_header";
 
 function page() {
   return (
     <div className="min-h-screen">
-      <ServicesItemHeader />
-      <ServicesItemContent />
+      <LightingControlHeader />
+      <LightingControlContent />
     </div>
   );
 }
