@@ -50,32 +50,22 @@ export default function LightingControlContent() {
             </p>
           </div>
         </div>
-        <div className="w-full flex items-center justify-evenly p-24">
-          {/* Bottom Image */}
-          <div className="relative w-1/2 h-48">
-            <Image
-              src="/phase.png"
-              alt="Architectural Lighting"
-              fill
-              className="object-covers px-4"
-            />
-          </div>
-          <div className="relative w-1/2 h-48">
-            <Image
-              src="/dali.png"
-              alt="Architectural Lighting"
-              fill
-              className="object-covers px-4"
-            />
-          </div>
-          <div className="relative w-1/2 h-48">
-            <Image
-              src="/10v.png"
-              alt="Architectural Lighting"
-              fill
-              className="object-covers px-4"
-            />
-          </div>
+        <div className="w-full flex flex-col md:flex-row items-center justify-evenly p-12 md:py-24 gap-6 md:gap-0">
+          <img
+            src="/phase.png"
+            alt="Architectural Lighting"
+            className="w-full md:w-1/3 object-contain px-4"
+          />
+          <img
+            src="/dali.png"
+            alt="Architectural Lighting"
+            className="w-full md:w-1/3 object-contain px-4"
+          />
+          <img
+            src="/10v.png"
+            alt="Architectural Lighting"
+            className="w-full md:w-1/3 object-contain px-4"
+          />
         </div>
       </div>
     </div>
