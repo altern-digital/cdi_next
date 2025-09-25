@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getS3Url } from "@/app/utils/s3File";
-import { Image } from "antd";
+import * as antd from "antd";
 import { useParams, useRouter } from "next/navigation";
 import "antd/dist/reset.css";
 
@@ -82,7 +82,7 @@ export default function Page() {
       {/* Cover Image */}
       <div className="flex justify-center mt-8">
         <div className="relative w-full max-w-3xl bg-[#222] overflow-hidden shadow-lg">
-          <Image
+          <antd.Image
             src={
               project.cover && project.cover.filename_disk
                 ? getS3Url(project.cover.filename_disk)
@@ -103,22 +103,25 @@ export default function Page() {
         <section className="max-w-5xl mx-auto py-12 px-4">
           <h2 className="text-2xl font-semibold mb-6 text-center">Gallery</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {project.gallery.map((item) => (
-              <Image
-                key={item.id}
-                src={
-                  item.directus_files_id && item.directus_files_id.filename_disk
-                    ? getS3Url(item.directus_files_id.filename_disk)
-                    : "/placeholder.png"
-                }
-                alt={`Gallery image ${item.id}`}
-                className="w-full h-full object-contain"
-                preview={{
-                  mask: "Click to preview",
-                  maskClassName: "text-white",
-                }}
-              />
-            ))}
+            <antd.Image.PreviewGroup>
+              {project.gallery.map((item) => (
+                <antd.Image
+                  key={item.id}
+                  src={
+                    item.directus_files_id &&
+                    item.directus_files_id.filename_disk
+                      ? getS3Url(item.directus_files_id.filename_disk)
+                      : "/placeholder.png"
+                  }
+                  alt={`Gallery image ${item.id}`}
+                  className="w-full h-full object-contain"
+                  preview={{
+                    mask: "Click to preview",
+                    maskClassName: "text-white",
+                  }}
+                />
+              ))}
+            </antd.Image.PreviewGroup>
           </div>
         </section>
       )}
