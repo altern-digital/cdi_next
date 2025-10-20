@@ -33,7 +33,7 @@ export default function ProjectContent() {
     const fetchData = async () => {
       const response = await fetch("/api-proxy/projects?fields=*.*.*");
       const dataJson = await response.json();
-      setProjects(dataJson.data);
+      setProjects(dataJson.data.sort((a: ProjectData, b: ProjectData) => b.id - a.id));
     };
     fetchData();
   }, []);
